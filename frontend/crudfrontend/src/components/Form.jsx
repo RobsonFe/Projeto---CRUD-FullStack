@@ -39,23 +39,20 @@ color: white;
 height: 42px;
 `;
 
-const Form =({ getUsers, onEdit, setOnEdit }) =>{
-    const ref =useRef();
-
-    const Form = ({ onEdit }) => {
-        const ref = useRef();
-
-        useEffect(() => {
-            if (onEdit){
-                const user = ref.current;
-
-                user.nome.value = onEdit.nome;
-                user.email.value = onEdit.email;
-                user.tel.value = onEdit.tel;
-                user.dataNasc = onEdit.dataNasc;
-            }
-        }, [onEdit]);
-    }
+const Form = ({ getUsers, onEdit, setOnEdit }) => {
+    const ref = useRef();
+  
+    useEffect(() => {
+      if (onEdit) {
+        const user = ref.current;
+  
+        user.nome.value = onEdit.nome;
+        user.email.value = onEdit.email;
+        user.tel.value = onEdit.tel;
+        user.dataNasc.value = onEdit.dataNasc;
+      }
+    }, [onEdit]);
+  
 
     const handleSubmit = async (e) => {
         e.preventDefault();
