@@ -1,7 +1,5 @@
 # Projeto Full-Stack: Página de CRUD com ReactJS, NodeJS e MySQL
 
-![Banner](link_para_sua_imagem_banner)
-
 ## Introdução
 
 Bem-vindo(a) ao repositório **ProjetoFullStackReactNodeMySQL**, um espaço onde a colaboração e a tecnologia se fundem para criar uma aplicação full-stack incrível. Se você está entusiasmado(a) com o desenvolvimento completo de uma aplicação web usando as mais recentes tecnologias, você está prestes a mergulhar em uma jornada emocionante!
