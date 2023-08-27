@@ -18,6 +18,42 @@ Nosso objetivo com este projeto foi colocar em prática os conceitos que adquiri
 - Backend robusto com NodeJS para gerenciamento de rotas.
 - Conexão e operações de CRUD com o banco de dados MySQL.
 
+## Configurações do Projeto
+
+- Utilizamos o pacote yarn com o Vite- react
+  
+  ```yarn create vite ```
+  
+- Usamos um formulario com os dados recebidos do cliente para ser consultado e formatado.
+
+  ```
+  const Form = ({ getUsers, onEdit, setOnEdit }) => {
+    const ref = useRef();
+  
+    useEffect(() => {
+      if (onEdit) {
+        const user = ref.current;
+  
+        user.nome.value = onEdit.nome;
+        user.email.value = onEdit.email;
+        user.tel.value = onEdit.tel;
+        user.dataNasc.value = onEdit.dataNasc;
+      }
+    }, [onEdit]);```
+  
+- Usamos o MySQL para armazenar os dados em um banco
+  
+  ```import mysql from "mysql"```
+  
+  ```
+  export const db =mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "crudreact"
+   })
+  ```
+
 ## Aprendizados
 
 Durante a realização deste projeto, expandimos nossos conhecimentos em várias áreas-chave:
@@ -34,9 +70,9 @@ Este projeto marca um ponto de partida, e estamos ansiosos para continuar a apri
 
 Sinta-se à vontade para explorar os arquivos e pastas deste repositório para entender como criamos essa aplicação full-stack. Você pode examinar o código, descobrir como integramos o ReactJS e o NodeJS e até mesmo testar a aplicação por conta própria.
 
-## Contribua
+## Video do Projeto
 
-Se você tem sugestões para melhorias ou gostaria de compartilhar suas próprias experiências com o desenvolvimento full-stack, não hesite em contribuir! Basta fazer um fork deste repositório, adicionar suas melhorias e enviar um pull request.
+[Assista ao vídeo do projeto](https://youtu.be/Htvfm2-TVWk)
 
 ## Contato
 
