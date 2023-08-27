@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Bem-vindo(a) ao repositório **ProjetoFullStackReactNodeMySQL**, um espaço onde a colaboração e a tecnologia se fundem para criar uma aplicação full-stack incrível. Se você está entusiasmado(a) com o desenvolvimento completo de uma aplicação web usando as mais recentes tecnologias, você está prestes a mergulhar em uma jornada emocionante!
+Bem-vindo(a) ao repositório **Projeto Full-Stack React Node MySQL**, um espaço onde a colaboração e a tecnologia se fundem para criar uma aplicação full-stack incrível. Se você está entusiasmado(a) com o desenvolvimento completo de uma aplicação web usando as mais recentes tecnologias, você está prestes a mergulhar em uma jornada emocionante!
 
 ## Sobre o Projeto
 
