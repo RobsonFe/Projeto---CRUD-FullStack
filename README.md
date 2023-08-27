@@ -53,6 +53,76 @@ Nosso objetivo com este projeto foi colocar em prática os conceitos que adquiri
     database: "crudreact"
    })
   ```
+## Operação de CRUD
+
+- Importando o banco de dados.
+  
+  ```import {db}from "../db.js";```
+  
+  - Criando os dados (Create)
+    ```
+    export const addUser = (req, res) => {
+
+    const q =
+
+    "INSERT INTO usuarios(`nome` , `email` , `tel` , `dataNasc` ) VALUES(?)";
+
+    const values = [
+        req.body.nome,
+        req.body.email,
+        req.body.tel,
+        req.body.dataNasc,
+    ];
+
+    db.query(q,[values], (err) => {
+        if (err) return res.json(err);
+
+        return res.status(200).json("Usuario criado com sucesso. ");
+
+    });};
+
+  - Atualizando os dados (Update)
+    ```
+    export const updateUser = (req, res) => {
+
+    const q = 
+    "UPDATE usuarios SET `nome` = ?, `email` = ?, `tel` = ?, `dataNasc` = ? WHERE `id` = ?";
+    const values = [
+        req.body.nome,
+        req.body.email,
+        req.body.tel,
+        req.body.dataNasc,
+    ];
+
+    db.query(q, [...values, req.params.id], (err) => {
+        if (err) return res.json(err);
+
+        return res.status(200).json("Usuario atualizado com sucesso. ");
+    })};
+
+  - Consultando os dados (Read).
+    
+    ```
+    export const getUsers= (_, res) =>{
+    const q = "SELECT * FROM usuarios";
+
+    db.query(q, (err, data) => {
+        if (err) return res.json(err);
+
+        return res.status(200).json(data);
+    });
+    };
+
+  - Deletando os dados (Delete)
+    ```
+    export const deleteUser = (req, res) => {
+    const q = "DELETE FROM usuarios WHERE `id` = ?";
+  
+    db.query(q, [req.params.id], (err) => {
+      if (err) return res.json(err);
+  
+      return res.status(200).json("Usuário deletado com sucesso.");
+    });};
 
 ## Aprendizados
 
