@@ -147,5 +147,3 @@ Sinta-se à vontade para explorar os arquivos e pastas deste repositório para e
 ## Contato
 
 Gostaria de se conectar, compartilhar insights ou discutir estratégias de desenvolvimento? Vamos trocar ideias [aqui](https://www.linkedin.com/in/robson-ferreira-508247134/)!
-
-Esperamos que este repositório inspire você a mergulhar fundo no desenvolvimento full-stack e a criar projetos impactantes com tecnologias modernas. Vamos construir um futuro digital incrível juntos!
