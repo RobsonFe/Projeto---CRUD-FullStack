@@ -80,6 +80,19 @@ Nosso objetivo com este projeto foi colocar em prática os conceitos que adquiri
         return res.status(200).json("Usuario criado com sucesso. ");
 
     });};
+    ```
+
+  - Consultando os dados (Read).
+    ```
+    export const getUsers= (_, res) =>{
+    const q = "SELECT * FROM usuarios";
+
+    db.query(q, (err, data) => {
+        if (err) return res.json(err);
+
+        return res.status(200).json(data);
+    });
+    };
 
   - Atualizando os dados (Update)
     ```
@@ -99,19 +112,6 @@ Nosso objetivo com este projeto foi colocar em prática os conceitos que adquiri
 
         return res.status(200).json("Usuario atualizado com sucesso. ");
     })};
-
-  - Consultando os dados (Read).
-    
-    ```
-    export const getUsers= (_, res) =>{
-    const q = "SELECT * FROM usuarios";
-
-    db.query(q, (err, data) => {
-        if (err) return res.json(err);
-
-        return res.status(200).json(data);
-    });
-    };
 
   - Deletando os dados (Delete)
     ```
